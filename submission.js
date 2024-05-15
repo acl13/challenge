@@ -12,8 +12,13 @@ const findSum = function(array) {
   };
   
   const isPalindrome = function(str) {
-    // your code here - don't forget to return a boolean!
- 
+    let lowerCase = str.toLowerCase();
+    let reverseString = lowerCase.split('').reverse().join('');
+    if (lowerCase === reverseString) {
+        return true; 
+    } else {
+        return false; 
+    }
   };
 
   
