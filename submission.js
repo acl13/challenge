@@ -27,8 +27,10 @@ const findSum = function(array) {
   };
   
   const removeParenth = function(str) {
-    // your code here - don't forget to return a string!
+    let newString = str.replace(/\(.*\)/g, '');
+    return newString;
   };
+
   
   const scoreScrabble = function(str) {
     // your code here - don't forget to return a number!
