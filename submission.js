@@ -33,5 +33,24 @@ const findSum = function(array) {
 
   
   const scoreScrabble = function(str) {
-    // your code here - don't forget to return a number!
+    let array = str.toLowerCase().split('');
+    let sum = 0;
+    for (letter of array) {
+        if (letter === 'q' || letter === 'z') {
+            sum += 10;
+        } else if (letter === 'j' || letter === 'x') {
+            sum += 8;
+        } else if (letter === 'k') {
+            sum += 5;
+        } else if (letter === 'f' || letter === 'h' || letter === 'v' || letter === 'w' || letter === 'y') {
+            sum += 4;
+        } else if (letter === 'b' || letter === 'c' || letter === 'm' || letter === 'p') {
+            sum += 3;
+        } else if (letter === 'd' || letter === 'g') {
+            sum += 2;
+        } else {
+            sum += 1;
+        }
+    }
+    return sum; 
   };
