@@ -47,7 +47,17 @@ return result;
   
   const largestPair = function(array) {
     // your code here - don't forget to return a number!
+    let products = [];
+    for (i = 0; i < array.length -1; i++) {
+        let product = array[i] * array[i + 1];
+        products.push(product);
+    }
+
+    let largest = Math.max(...products);
+    return largest; 
   };
+
+console.log(largestPair([9, 5, 10, 2, 24, -1, -48]));
   
   const removeParenth = function(str) {
     let newString = str.replace(/\(.*\)/g, '');
